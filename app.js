@@ -62,7 +62,7 @@ async function start() {
       let nowTime = new Date().getTime();
       let day = parseInt((nowTime - updateTime)/(24*60*60*1000));
       if(day>28){
-           await sendNotify("您的cookie已经使用"+day+"天了哦，有效期30天，记得到github上面更新哦！");
+           await sendNotify("您的cookie已经使用"+day+"天了哦，有效期30天，记得到github上面更新哦！记得更改app.js上面的updateTime");
       }else{
            //await sendNotify("cookie已经使用"+day+"天！");
            //await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
