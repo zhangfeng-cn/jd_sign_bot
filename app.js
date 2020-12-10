@@ -53,23 +53,25 @@ async function start() {
   console.log('执行完毕')
 
   if (serverJ) {
-    const path = "./result.txt";
+    /*const path = "./result.txt";
     let content = "";
     if (fs.existsSync(path)) {
       content = fs.readFileSync(path, "utf8");
-    }
+    }*/
       let updateTime = new Date('2020/12/10 15:00:00').getTime();//更新时间，每30天提醒更新cookie
       let nowTime = new Date().getTime();
       let day = parseInt((nowTime - updateTime)/(24*60*60*1000));
       if(day>28){
            await sendNotify("您的cookie已经使用"+day+"天了哦，有效期30天，记得到github上面更新哦！记得更改app.js上面的updateTime");
+           console.log('发送结果完毕')
       }else{
+           console.log('不到30天，不通知')
            //await sendNotify("cookie已经使用"+day+"天！");
            //await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
       }
       
     //await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
-    console.log('发送结果完毕')
+    
   }
 }
 
