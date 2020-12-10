@@ -67,7 +67,7 @@ async function start() {
       }else{
            console.log('不到30天，不通知')
            //await sendNotify("cookie已经使用"+day+"天！");
-           await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
+           //await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
       }
       
     //await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
