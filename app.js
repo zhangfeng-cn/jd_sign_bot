@@ -65,7 +65,7 @@ async function start() {
            await sendNotify("您的cookie已经使用"+day+"天了哦，有效期30天，记得到github上面更新哦！记得更改app.js上面的updateTime");
            console.log('发送结果完毕')
       }else{
-           console.log('不到30天，不通知')
+           console.log('已使用'+day+'天，不到30天，不发送通知')
            //await sendNotify("cookie已经使用"+day+"天！");
            //await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
       }
