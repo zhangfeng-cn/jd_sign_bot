@@ -58,7 +58,7 @@ async function start() {
     //if (fs.existsSync(path)) {
       //content = fs.readFileSync(path, "utf8");
     //}
-      let updateTime = new Date('2020/12/10 15:00:00').getTime();//更新时间，每30天提醒更新cookie
+      let updateTime = new Date('2021/1/14 11:14:00').getTime();//更新时间，每30天提醒更新cookie
       let nowTime = new Date().getTime();
       let day = parseInt((nowTime - updateTime)/(24*60*60*1000));
       if(day>28){
